@@ -1,122 +1,121 @@
-# 🔐 AuthApp
+# AuthApp
 
-A simple full-stack authentication app built with **Node.js**, **Express**, **MongoDB**, and **JWT**. It provides secure user registration, login, and access to protected routes with token-based authentication.
-
----
-
-## 🚀 Features
-
-- ✅ User Registration (with password hashing via `bcryptjs`)
-- 🔐 User Login with JWT
-- 🛡️ Protected Dashboard Route
-- 🧠 Session persistence using `localStorage`
-- 🧪 Simple frontend using vanilla JavaScript + HTML
-- 📁 Clean folder structure for maintainability
+A simple full-stack authentication app built with Node.js, Express, MongoDB, and JWT. It provides secure user registration, login, and access to protected routes with token-based authentication.
 
 ---
 
-## 🧱 Tech Stack
+## Features
 
-**Frontend**
+- User registration with password hashing via bcryptjs  
+- User login with JWT  
+- Protected dashboard route  
+- Session persistence using localStorage  
+- Basic frontend with vanilla JavaScript and HTML  
+- Clean, maintainable folder structure  
+
+---
+
+## Tech Stack
+
+**Frontend**  
 - HTML, CSS, JavaScript
 
-**Backend**
-- Node.js
-- Express
-- MongoDB with Mongoose
-- JWT for authentication
-- bcryptjs for password hashing
-- dotenv for environment config
+**Backend**  
+- Node.js  
+- Express  
+- MongoDB with Mongoose  
+- JWT for authentication  
+- bcryptjs for password hashing  
+- dotenv for environment configuration
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
+```
 authApp/
 │
-├── public/ # Frontend HTML, CSS, and JS
-│ ├── index.html
-│ ├── login.html
-│ ├── dashboard.html
-│ └── script.js
+├── public/               # Frontend HTML, CSS, and JS
+│   ├── index.html
+│   ├── login.html
+│   ├── dashboard.html
+│   └── script.js
 │
-├── server/ # Backend
-│ ├── models/
-│ │ └── User.js
-│ ├── routes/
-│ │ ├── auth.js
-│ │ └── protected.js
-│ ├── controllers/
-│ │ └── authController.js
-│ ├── middleware/
-│ │ └── authMiddleware.js
-│ └── server.js
+├── server/               # Backend
+│   ├── models/
+│   │   └── User.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   └── protected.js
+│   ├── controllers/
+│   │   └── authController.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   └── server.js
 │
-├── .env # Your environment variables (not included in Git)
+├── .env                  # Environment variables (not committed)
 ├── .gitignore
 └── README.md
-
+```
 
 ---
 
-## 📦 Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/authApp.git
 cd authApp
+```
 
-2. Install Dependencies
+### 2. Install Dependencies
 
+```bash
 npm install
+```
 
-3. Create a .env File
+### 3. Create a `.env` File in the root
 
+```
 MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_jwt_secret
 PORT=5000
+```
 
-⚠️ Never commit your .env file to GitHub. It's listed in .gitignore.
+> Never commit your `.env` file to GitHub. It's ignored via `.gitignore`.
 
-4. Run the App
+### 4. Start the Server
 
+```bash
 node server/server.js
+```
 
-Then open the app in your browser at:
+Open your browser at:
 
+```
 http://localhost:5000
-
-🧪 Test Credentials
-To test:
-
-Register a user at /index.html
-
-Then log in at /login.html
-
-View protected dashboard at /dashboard.html
-
-🧼 Clean-Up Before Production
-✅ Remove all console.log() statements
-✅ Switch from hardcoded localhost API URL to relative paths or environment config
-✅ Add CSRF/XSS protection as needed for advanced use
-
-📌 Notes
-This is a basic educational template and does not include features like password reset, email verification, or 2FA.
-
-For production use, ensure you use HTTPS and deploy to secure hosting.
-
-👨‍💻 Author
-Created by Mason Carver – feel free to fork, improve, and contribute!
-
+```
 
 ---
 
-Let me know if you want:
-- A personalized author name/link
-- Deployment instructions (e.g. Render/Vercel)
-- Screenshots or logo
-- GitHub Pages setup for the frontend
+## Test the App
 
-Ready to go when you are!
+1. Go to `/index.html` to register a new user  
+2. Log in at `/login.html`  
+3. View protected content at `/dashboard.html`  
 
+---
+
+## Clean-Up Before Production
+
+- Remove all console.log statements  
+- Replace hardcoded API URLs with environment-based config  
+- Add CSRF and XSS protection if deploying publicly  
+- Serve with HTTPS  
+
+---
+
+## License
+
+This project is provided as-is for educational purposes. You may fork and modify it freely. For production use, please follow security best practices.
