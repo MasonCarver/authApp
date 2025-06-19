@@ -67,7 +67,11 @@ authApp/
 git clone https://github.com/your-username/authApp.git
 cd authApp
 
+2. Install Dependencies
+
 npm install
+
+3. Create a .env File
 
 MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_jwt_secret
@@ -75,7 +79,11 @@ PORT=5000
 
 ⚠️ Never commit your .env file to GitHub. It's listed in .gitignore.
 
+4. Run the App
+
 node server/server.js
+
+Then open the app in your browser at:
 
 http://localhost:5000
 
